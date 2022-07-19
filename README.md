@@ -15,14 +15,14 @@ next what we need opne 2 new bash window in this derectory and enter
 first bash we need enter
 ```bash
 cd server 
-//and 
+npm install
 npm start
 ```
 second bash we need enter
 
 ```bash
 cd client
-//and 
+npm install
 npm start
 ```
 
