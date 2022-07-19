@@ -6,9 +6,7 @@ Use the package manager [npm](https://www.npmjs.com/)
 
 in bash enter next commands (cd delivery-app-eliftech-ita-test-task ):
 ```bash
-    cd delivery-app-eliftech-ita-test-task
-    //and 
-    npm install 
+cd delivery-app-eliftech-ita-test-task
 ```
 next what we need opne 2 new bash window in this derectory and enter 
 
