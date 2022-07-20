@@ -69,19 +69,6 @@ const ShoppingCart = () => {
     [isSubmitSuccessful, basket]
   )
 
-  // useEffect(() => {
-  //   let items = 0
-  //   let price = 0
-
-  //   basket.forEach(item => {
-  //     items += item.qty
-  //     price += item.qty * item.price
-  //   })
-
-  //   setTotalItems(items)
-  //   setTotalPrice(price)
-  // }, [basket, totalPrice, totalItems, setTotalPrice, setTotalItems])
-
   useEffect(() => {
     const { qty, price } = basket.reduce(
       (acc, item) => {

@@ -2,12 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import ClearIcon from '@mui/icons-material/Clear'
-import {
-  adjustItemQty,
-  deleteOrder,
-  remuveOrder,
-} from '../../../redux/shoppingCartReduser'
+import { adjustItemQty, deleteOrder } from '../../../redux/shoppingCartReduser'
 import { connect } from 'react-redux'
 
 import s from './ShoppingCartOrder.module.scss'

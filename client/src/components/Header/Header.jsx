@@ -21,12 +21,6 @@ const Header = () => {
                   Shop
                 </NavLink>
               </Typography>
-
-              {/* <Typography textAlign={'center'}>
-                <NavLink to={'/shoppingcart'} className={s.headerLink}>
-                  Shopping Cart
-                </NavLink>
-              </Typography> */}
             </Toolbar>
           </Container>
 
