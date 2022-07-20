@@ -11,7 +11,7 @@ const App = () => {
       <div>
         <Routes>
           <Route path='/' element={<Navigate replace to={'/shop'} />} />
-          <Route path='/shop' element={<Shops />} />
+          <Route path='/shop' index element={<Shops />} />
           <Route path='/shoppingcart' element={<ShoppingCart />} />
         </Routes>
       </div>

@@ -17,7 +17,7 @@ const Goods = props => {
 
   return (
     <div className={s.goodsWrapper}>
-      <Card sx={{ maxWidth: 345, m: '0 auto' }}>
+      <Card sx={{ maxWidth: 345, margin: '0 auto' }}>
         <CardMedia
           component='img'
           height='140'
