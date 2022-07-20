@@ -26,4 +26,4 @@ npm start
 
 now you can open this project by [this URL](http://localhost:3000/) (http://localhost:3000/)
 
-deployed app https://delivery-app-eliftect-test.herokuapp.com/#/shop
+deployed app https://delivery-app-eliftect-test.herokuapp.com
