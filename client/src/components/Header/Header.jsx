@@ -17,7 +17,7 @@ const Header = () => {
           <Container maxWidth='xl'>
             <Toolbar disableGutters>
               <Typography textAlign={'center'}>
-                <NavLink to={'/shop/*'} className={s.headerLink}>
+                <NavLink to={'/shop'} className={s.headerLink}>
                   Shop
                 </NavLink>
               </Typography>
