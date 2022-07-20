@@ -1,12 +1,12 @@
 import React from 'react'
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
+import { HashRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
 import Header from './components/Header/Header'
 import Shops from './components/Shops/Shops'
 import ShoppingCart from './components/ShoppingCart/ShoppingCart'
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <Router>
       <Header />
       <div>
         <Routes>
@@ -15,7 +15,7 @@ const App = () => {
           <Route path='/shoppingcart' element={<ShoppingCart />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
   )
 }
 
