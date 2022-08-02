@@ -29,16 +29,24 @@ export const setRestoranProductsAction = currentShopProducts => ({
   currentShopProducts,
 })
 
-export const setRestoran = async dispatch => {
-  const restorans = await api.getRestorans()
-  dispatch(setRestoransAction(restorans))
+// export const getRestoran = async dispatch => {
+
+// }
+
+export const RestoranThunkCreator = () => {
+  return async dispatch => {
+    const restorans = await api.getRestorans()
+    dispatch(setRestoransAction(restorans))
+  }
 }
 
-export const setRestoranProducts = async (dispatch, id) => {
-  const goods = await api.getRestoranMenu(id).then(res => {
-    return res
-  })
-  dispatch(setRestoranProductsAction(goods))
+export const RestoranProductsThunkCreator = id => {
+  return async dispatch => {
+    const goods = await api.getRestoranMenu(id).then(res => {
+      return res
+    })
+    dispatch(setRestoranProductsAction(goods))
+  }
 }
 
 export default shopReducer

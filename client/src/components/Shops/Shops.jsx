@@ -1,23 +1,25 @@
 import React from 'react'
 import Restoran from './Restoran/Restoran'
 import Goods from './Goods'
-import { useDispatch, useSelector } from 'react-redux'
+import { connect, useSelector } from 'react-redux'
 import { Grid, Typography } from '@mui/material'
-import { setRestoran, setRestoranProducts } from '../../redux/shopReduser'
+import {
+  RestoranThunkCreator,
+  RestoranProductsThunkCreator,
+} from '../../redux/shopReduser'
 import { useEffect } from 'react'
 
 import s from './Shops.module.scss'
 
-const Shops = () => {
+const Shops = ({ setRestoran, setProducts }) => {
   const shops = useSelector(state => state.shopPage)
-  const dispatch = useDispatch()
 
   const openGoods = id => {
-    setRestoranProducts(dispatch, id)
+    setProducts(id)
   }
 
   useEffect(() => {
-    setRestoran(dispatch)
+    setRestoran()
   }, [])
 
   return (
@@ -52,4 +54,11 @@ const Shops = () => {
   )
 }
 
-export default Shops
+const mapDispatchToProps = dispatch => {
+  return {
+    setRestoran: (id, value) => dispatch(RestoranThunkCreator(id, value)),
+    setProducts: order => dispatch(RestoranProductsThunkCreator(order)),
+  }
+}
+
+export default connect(null, mapDispatchToProps)(Shops)
